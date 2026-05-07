@@ -3,8 +3,10 @@ import pandas as pd
 import pickle as pkl
 import streamlit as st
 
-df = pd.read_csv('df.csv')
-model = pkl.load(open('model.pkl','rb'))
+import os
+base_path = os.path.dirname(__file__)
+df = pd.read_csv(os.path.join(base_path, 'df.csv'))
+model = pkl.load(open(os.path.join(base_path, 'model.pkl'),'rb'))
 
 st.header('Churn Prediction')
 st.write('Telecom Service')
