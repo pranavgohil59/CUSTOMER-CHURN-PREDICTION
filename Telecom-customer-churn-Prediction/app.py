@@ -3,7 +3,7 @@ import pandas as pd
 import pickle as pkl
 import streamlit as st
 
-df = pd.read_csv('df.csv.csv')
+df = pd.read_csv('df.csv')
 model = pkl.load(open('model.pkl','rb'))
 
 st.header('Churn Prediction')
